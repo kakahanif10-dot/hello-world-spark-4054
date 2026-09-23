@@ -1,18 +1,4 @@
-# Rebuild roadmap
+# Roadmap
 
-- [x] Mirror the landing page and bundled assets.
-- [x] Add the sign-in and workspace screens.
-- [x] Add chat and generation request handlers with local fallbacks.
-- [x] Verify desktop and mobile pages and an app-generation flow.
-- [x] Use a light grey Lovable-style workspace instead of black.
-- [x] Remove the prompt outline and default the preview to a wider zoomed-out view.
-- [x] Add a full-chat mode that closes the preview and configuration panels.
-- [x] Polish chat header spacing and branding
-- [x] Remove remaining dashboard and logo-column borders
-- [x] Apply #202020 dark grey across the workspace
-- [x] Make workspace scrollbars smaller and seamless
-- [ ] Match login page to white centered modal
-- [ ] Add drag-to-resize between workspace panels (sidebar/chat/preview)
-
-- [x] Login as white modal over the landing page (dimmed backdrop)
-- [x] Drag-to-resize: sidebar/chat and chat/preview
+- [x] Remove arrow send button from chat composer
+- [ ] Show SUPERINTELLIGENS logo/text on the left (chat header)

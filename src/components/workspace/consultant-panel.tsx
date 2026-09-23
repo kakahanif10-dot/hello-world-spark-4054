@@ -80,11 +80,8 @@ export function ConsultantPanel({
   return (
     <div className="flex h-full flex-col bg-background">
       <div className="flex h-11 shrink-0 items-center justify-between bg-background px-3">
-        <div className="flex items-center gap-2 px-1">
-          <span className="text-[11px] font-medium tracking-wide text-muted-foreground">
-            AI Consultant
-          </span>
-        </div>
+        <div />
+
         <Button
           variant="ghost"
           size="icon-sm"

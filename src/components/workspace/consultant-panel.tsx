@@ -20,11 +20,11 @@ import {
   PromptInput,
   PromptInputButton,
   PromptInputFooter,
-  PromptInputSubmit,
   PromptInputTextarea,
   PromptInputTools,
 } from '@/components/ai-elements/prompt-input'
 import { Shimmer } from '@/components/ai-elements/shimmer'
+import { SuperintelligensMark } from '@/components/superintelligens-logo'
 import { Button } from '@/components/ui/button'
 import { TEMPLATE_LABELS, type DesignSpec } from '@/lib/design'
 import {
@@ -80,7 +80,14 @@ export function ConsultantPanel({
   return (
     <div className="flex h-full flex-col bg-background">
       <div className="flex h-11 shrink-0 items-center justify-between bg-background px-3">
-        <div />
+        <div className="flex items-center gap-2">
+          <SuperintelligensMark className="h-6 w-6 shrink-0" />
+          <span className="text-[15px] tracking-wide text-foreground">
+            <strong className="font-extrabold">SUPER</strong>
+            <span className="font-medium">INTELLIGENS</span>
+          </span>
+        </div>
+
 
         <Button
           variant="ghost"
@@ -171,12 +178,6 @@ export function ConsultantPanel({
               </PromptInputButton>
               <span className="hidden text-[10px] text-muted-foreground sm:inline">Plan & build</span>
             </PromptInputTools>
-            <PromptInputSubmit
-              status={busy ? 'submitted' : 'ready'}
-              disabled={!prompt.trim() || busy}
-              aria-label="Send prompt"
-              className="rounded-full bg-muted-foreground/70 text-background hover:bg-muted-foreground"
-            />
           </PromptInputFooter>
         </PromptInput>
 

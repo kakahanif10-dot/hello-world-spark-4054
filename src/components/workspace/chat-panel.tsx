@@ -1,7 +1,7 @@
 
 import { useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUp, Paperclip, Smartphone, Sparkles } from 'lucide-react'
+import { Paperclip, Smartphone, Sparkles } from 'lucide-react'
 import { SuperintelligensMark } from '@/components/superintelligens-logo'
 import { cn } from '@/lib/utils'
 
@@ -92,17 +92,9 @@ export function ChatPanel({
             placeholder="Describe a change or a new feature…"
             className="w-full resize-none bg-transparent px-2 py-1.5 text-sm leading-relaxed placeholder:text-muted-foreground focus:outline-none"
           />
-          <div className="flex items-center justify-between px-1">
+          <div className="flex items-center justify-start px-1">
             <button className="rounded-md p-1.5 text-muted-foreground transition-colors hover:text-foreground">
               <Paperclip className="h-4 w-4" />
-            </button>
-            <button
-              onClick={onSend}
-              disabled={!input.trim() || generating || generatingApk}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-secondary text-secondary-foreground transition-opacity hover:opacity-90 disabled:opacity-40"
-              aria-label="Send message"
-            >
-              <ArrowUp className="h-4 w-4" />
             </button>
           </div>
         </div>

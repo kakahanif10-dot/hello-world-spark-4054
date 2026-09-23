@@ -8,7 +8,9 @@ export function ResizeHandle({
   min = 200,
   max = 720,
   className = '',
+  side = 'left',
 }: {
+  side?: 'left' | 'right'
   onResize: (width: number) => void
   min?: number
   max?: number
@@ -21,7 +23,7 @@ export function ResizeHandle({
       e.preventDefault()
       const el = ref.current
       if (!el) return
-      const prev = el.previousElementSibling as HTMLElement | null
+      const prev = (side === 'right' ? el.nextElementSibling : el.previousElementSibling) as HTMLElement | null
       if (!prev) return
       const startX = e.clientX
       const startWidth = prev.getBoundingClientRect().width
@@ -32,7 +34,7 @@ export function ResizeHandle({
       body.style.userSelect = 'none'
 
       const move = (ev: PointerEvent) => {
-        const next = Math.min(max, Math.max(min, startWidth + (ev.clientX - startX)))
+        const next = Math.min(max, Math.max(min, startWidth + (side === 'right' ? startX - ev.clientX : ev.clientX - startX)))
         onResize(next)
       }
       const up = () => {
@@ -44,7 +46,7 @@ export function ResizeHandle({
       window.addEventListener('pointermove', move)
       window.addEventListener('pointerup', up)
     },
-    [onResize, min, max],
+    [onResize, min, max, side],
   )
 
   return (

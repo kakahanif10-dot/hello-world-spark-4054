@@ -96,6 +96,7 @@ function WorkspacePage() {
   const [collapsed, setCollapsed] = useState(false)
   const [sidebarWidth, setSidebarWidth] = useState(264)
   const [chatWidth, setChatWidth] = useState(420)
+  const [drawerWidth, setDrawerWidth] = useState(360)
   const [tab, setTab] = useState<SidebarTab>('chats')
   const [sessions, setSessions] = useState<Session[]>([])
   const [activeId, setActiveId] = useState<string | null>(null)
@@ -442,8 +443,10 @@ function WorkspacePage() {
             />
           </div>}
 
+          {!chatExpanded && drawerOpen && <ResizeHandle side="right" onResize={setDrawerWidth} min={280} max={640} />}
           {!chatExpanded && <ThemeDrawer
             spec={spec}
+            width={drawerWidth}
             open={drawerOpen}
             onToggle={() => setDrawerOpen((o) => !o)}
             onApplyAccent={applyAccent}

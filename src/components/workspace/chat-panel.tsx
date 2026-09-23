@@ -1,7 +1,7 @@
 
 import { useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Paperclip, Smartphone, Sparkles } from 'lucide-react'
+import { Paperclip, Smartphone } from 'lucide-react'
 import { SuperintelligensMark } from '@/components/superintelligens-logo'
 import { cn } from '@/lib/utils'
 

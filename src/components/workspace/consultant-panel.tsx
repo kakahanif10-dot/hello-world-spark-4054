@@ -213,7 +213,7 @@ function EmptyState({ onPick }: { onPick: (v: string) => void }) {
           preview. Try one of these:
         </div>
       </div>
-      <div className="flex flex-col gap-1.5 pl-10">
+      <div className="flex flex-col gap-1.5">
         {EXAMPLES.map((ex) => (
           <button
             key={ex}

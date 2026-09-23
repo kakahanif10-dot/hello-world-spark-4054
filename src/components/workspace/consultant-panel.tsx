@@ -26,7 +26,6 @@ import {
 } from '@/components/ai-elements/prompt-input'
 import { Shimmer } from '@/components/ai-elements/shimmer'
 import { Button } from '@/components/ui/button'
-import { SuperintelligensMark } from '@/components/superintelligens-logo'
 import { TEMPLATE_LABELS, type DesignSpec } from '@/lib/design'
 import {
   COMPILE_STEPS,
@@ -207,7 +206,6 @@ function EmptyState({ onPick }: { onPick: (v: string) => void }) {
   return (
     <div className="space-y-4">
       <div className="flex gap-3">
-        <SuperintelligensMark className="h-7 w-7 shrink-0" />
         <div className="rounded-2xl rounded-tl-sm border border-border bg-card/70 px-3.5 py-2.5 text-sm leading-relaxed text-foreground">
           I&apos;m your autonomous engineering consultant. Describe any product —
           a government tax portal, a coffee shop, a marketplace — and I&apos;ll
@@ -328,7 +326,6 @@ function AssistantBubble({
   return (
     <Message from="assistant" className="animate-fade-in">
       <div className="flex gap-3">
-        <SuperintelligensMark className="mt-0.5 h-7 w-7 shrink-0" />
         <div className="min-w-0 max-w-[88%] space-y-2">
           <MessageContent className="w-full">
           {message.text ? (
@@ -383,7 +380,6 @@ function CompileLog() {
       exit={{ opacity: 0 }}
       className="flex gap-3"
     >
-      <SuperintelligensMark className="mt-0.5 h-7 w-7 shrink-0" />
       <div className="w-full max-w-[85%] space-y-2 rounded-2xl rounded-tl-sm border border-border bg-card/70 px-3.5 py-3">
         <div className="flex items-center gap-2 text-xs font-medium text-foreground">
           <Cpu className="h-3.5 w-3.5 animate-pulse" />

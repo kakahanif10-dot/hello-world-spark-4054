@@ -137,6 +137,7 @@ const INDUSTRY_SEEDS: { label: string; seed: string }[] = [
 
 export function ThemeDrawer({
   spec,
+  width = 360,
   open,
   onToggle,
   onApplyAccent,
@@ -148,6 +149,7 @@ export function ThemeDrawer({
   onAppNameChange,
   generating,
 }: {
+  width?: number
   spec: DesignSpec
   open: boolean
   onToggle: () => void
@@ -253,9 +255,9 @@ export function ThemeDrawer({
 
   return (
     <motion.aside
-      animate={{ width: open ? 360 : 52 }}
+      animate={{ width: open ? width : 52 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
-      className="relative z-10 hidden max-h-screen w-full max-w-[360px] shrink-0 flex-col overflow-hidden bg-muted/40 lg:flex"
+      className="relative z-10 hidden max-h-screen shrink-0 flex-col overflow-hidden bg-muted/40 lg:flex"
     >
       {/* Header / collapse */}
       <div className="flex h-12 shrink-0 items-center gap-2 px-3">
